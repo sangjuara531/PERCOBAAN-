@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AERISHA'S DAYCARE - Beranda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Baloo 2', cursive;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffe6f1, #e6faff);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 30a10 10 0 0 1 0-20 12 12 0 0 1 20-2 10 10 0 1 1 0 22H20z' fill='%23fdd6e5' opacity='0.3'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 100px auto;
+            color: #444;
+        }
+
+        .background-decor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/414/414927.png');
+            background-repeat: repeat;
+            background-size: 120px;
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 850px;
+            background-color: #ffffffee;
+            margin: 60px auto;
+            padding: 30px 40px;
+            border-radius: 25px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 800;
+            color: #f58fc7;
+            text-align: center;
+            margin-bottom: 0;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #fbbcd9;
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        .home-content {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 18px;
+            color: #ec6bb5;
+        }
+
+        .footer {
+            background-color: #ffeaf5;
+            color: #9b4c78;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 14px;
+            border-top: 2px dashed #fca3d2;
+            margin-top: 40px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 -3px 10px rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-decor"></div>
+<nav style="background-color:#fff0f6; padding: 12px 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed #fca3d2;">
+    <div style="font-family:'Baloo 2', cursive; font-weight:700; font-size: 20px; color:#f58fc7;">
+        🌸 Aerisha's Daycare
+    </div>
+    <div style="display:flex; gap:16px; font-size: 14px;">
+        <a href="home.html" style="text-decoration: none; color:#ec6bb5; font-weight:600;">Home</a>
+        <a href="index.html" style="text-decoration: none; color:#ec6bb5; font-weight:600;">Formulir</a>
+        <a href="kontak.html" style="text-decoration: none; color:#ec6bb5; font-weight:600;">Kontak</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>✨ AERISHA'S DAYCARE ✨</h1>
+    <p class="subtitle">Tempat di mana tawa kecil bermekaran 🌼</p>
+    <p class="home-content">
+        Selamat datang di <strong>Aerisha's Daycare</strong>!  
+        Kami hadir untuk memberikan lingkungan yang <em>aman</em>, <em>hangat</em>, dan penuh keceriaan bagi buah hati Anda.  
+        Baik untuk perawatan harian penuh, setengah hari, maupun sesuai kebutuhan,  
+        kami selalu mengutamakan kebahagiaan, keamanan, dan perkembangan si kecil.
+    </p>
+
+    <div class="home-content">
+        <h3>Layanan Kami</h3>
+        <p>
+            Kami menawarkan berbagai pilihan layanan penitipan, mulai dari <strong>Full Day</strong>,  
+            <strong>Half Day</strong>, hingga <strong>Penitipan Fleksibel</strong>.  
+            Setiap anak mendapatkan perhatian penuh dari pengasuh berpengalaman  
+            dengan suasana yang nyaman dan penuh kasih sayang.
+        </p>
+    </div>
+
+    <div class="home-content">
+        <h3>Mengapa Memilih Kami?</h3>
+        <ul style="list-style-type: none; padding: 0; color: #f77eb8; text-align: left; display: inline-block;">
+            <li>💖 Staf yang berpengalaman, sabar, dan penuh perhatian</li>
+            <li>🌟 Lingkungan aman, bersih, dan ramah anak</li>
+            <li>📚 Aktivitas belajar kreatif & waktu bermain menyenangkan</li>
+            <li>🍎 Snack sehat & bergizi setiap hari</li>
+            <li>🤝 Pendekatan personal sesuai kebutuhan tiap anak</li>
+        </ul>
+    </div>
+</div>
+
+<footer class="footer" id="footer">
+    <p>🌸 Terima kasih telah mempercayakan buah hati tercinta di <strong>Aerisha's Daycare</strong>! 💕<br>
+        📍 Lokasi: Jl. Rainbownies Baby No.65, BabyTown <br>
+        ☎️ 0812-3456-7890
+    </p>
+</footer>
+
+</body>
+</html>

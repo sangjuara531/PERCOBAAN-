@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AERISHA'S DAYCARE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Baloo 2', cursive;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffe6f1, #e6faff);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 30a10 10 0 0 1 0-20 12 12 0 0 1 20-2 10 10 0 1 1 0 22H20z' fill='%23fdd6e5' opacity='0.3'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 100px auto;
+            color: #444;
+        }
+
+        .background-decor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/414/414927.png');
+            background-repeat: repeat;
+            background-size: 120px;
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 850px;
+            background-color: #ffffffee;
+            margin: 60px auto;
+            padding: 30px 40px;
+            border-radius: 25px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 800;
+            color: #f58fc7;
+            text-align: center;
+            margin-bottom: 0;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #fbbcd9;
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        h3 {
+            color: #ec6bb5;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 14px;
+            background-color: #fff0f6;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: #fca3d2;
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #f77eb8;
+            transform: scale(1.02);
+        }
+
+        #umur_anak {
+            margin-top: -10px;
+            margin-bottom: 20px;
+            color: #777;
+            font-style: italic;
+        }
+
+        .footer {
+            background-color: #ffeaf5;
+            color: #9b4c78;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 14px;
+            border-top: 2px dashed #fca3d2;
+            margin-top: 40px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 -3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .upload-area {
+    margin-bottom: 20px;
+}
+
+.upload-btn {
+    display: inline-block;
+    background-color: #fca3d2;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.upload-btn:hover {
+    background-color: #f77eb8;
+    transform: scale(1.03);
+}
+
+#file-name {
+    font-size: 13px;
+    color: #777;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 13px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .footer {
+        font-size: 13px;
+        padding: 16px 8px;
+    }
+
+    .background-decor {
+        background-size: 80px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="background-decor"></div>
+<nav style="background-color:#fff0f6; padding: 12px 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed #fca3d2;">
+        <div style="font-family:'Baloo 2', cursive; font-weight:700; font-size: 20px; color:#f58fc7;">
+            🌸 Aerisha's Daycare
+        </div>
+        <div style="display:flex; gap:16px; font-size: 14px;">
+             <a href="home.html" style="text-decoration: none; color:#ec6bb5; font-weight:600;">Home</a>
+             <a href="index.html" style="text-decoration: none; color:#ec6bb5; font-weight:600;">Formulir</a>
+        <a href="kontak.html" style="text-decoration: none; color:#ec6bb5; font-weight:600;">Kontak</a>
+    </div>
+</nav>
+    <div class="container">
+        <h1>✨ AERISHA'S DAYCARE ✨</h1>
+        <p class="subtitle">Where Giggles Bloom 🌼</p>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&display=swap" rel="stylesheet">
+
+        <form action="" method="POST" enctype="multipart/form-data">
+            <label for="nama_pendata">Nama Lengkap Anak:</label>
+            <input type="text" id="nama_pendata" name="nama_pendata" placeholder="Contoh: Aerisha Lovato" required>
+
+            <label for="tanggal_lahir">Tanggal Lahir Anak:</label>
+            <input type="date" id="tanggal_lahir" name="tanggal_lahir" min="2020-07-01" max="2024-07-31" required>
+            <p id="umur_anak"></p>
+
+            <div class="upload-area">
+  <label class="upload-btn" for="gambarInput">📸 Upload Foto Anak</label>
+  <input type="file" id="gambarInput" name="gambar" accept="image/*" hidden required>
+  <p id="file-name">Belum ada file dipilih</p>
+        </div>
+
+            <label for="data">Alergi atau Kondisi khusus medis Anak:</label>
+            <input type="text" name="data" id="harga" placeholder="Contoh: Alergi susu, asma" required>
+
+            <label for="jenis_kelamin">Jenis kelamin:</label>
+            <select name="jenis_kelamin" id="jenis_kelamin" required>
+                <option disabled selected>Pilih Jawaban</option>
+                <option value="Laki_Laki">Laki-Laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+
+            <label for="jadwal_daycare">Jadwal Daycare yang Dipilih:</label>
+            <select name="jadwal_daycare" id="jadwal_daycare" required>
+                <option disabled selected>Pilih Jadwal</option>
+                <option value="Full Day (08.00 - 17.00)">Full Day (08.00 - 17.00)</option>
+                <option value="Half Day - Pagi (08.00 - 12.00)">Half Day - Pagi (08.00 - 12.00)</option>
+                <option value="Half Day - Siang (13.00 - 17.00)">Half Day - Siang (13.00 - 17.00)</option>
+                <option value="Custom Time">Custom Time (akan dihubungi)</option>
+            </select>
+
+            <h3>👨‍👩‍👧‍👦 Data Orang Tua / Wali</h3>
+
+            <label for="nama_ortu">Nama Lengkap Orang Tua / Wali:</label>
+            <input type="text" id="nama_ortu" name="nama_ortu" placeholder="Contoh: Ms. Aerina Lovato" required>
+
+            <label for="hubungan">Hubungan dengan Anak:</label>
+            <select id="hubungan" name="hubungan" required>
+                <option disabled selected>Pilih Hubungan</option>
+                <option value="Ayah">Ayah</option>
+                <option value="Ibu">Ibu</option>
+                <option value="Wali">Wali</option>
+                <option value="Kakek/Nenek">Kakek/Nenek</option>
+                <option value="Bibi/Paman">Bibi/Paman</option>
+            </select>
+
+            <label for="no_hp">Nomor HP Aktif:</label>
+            <input type="tel" id="no_hp" name="no_hp" placeholder="Contoh: 0812xxxxxxx" required>
+
+            <label for="email">Email Orang Tua (opsional):</label>
+            <input type="email" id="email" name="email" placeholder="Contoh: bunda@gmail.com">
+
+            <label for="pekerjaan">Pekerjaan Orang Tua (opsional):</label>
+            <input type="text" id="pekerjaan" name="pekerjaan" placeholder="Contoh: Dokter, Guru, Ibu Rumah Tangga">
+
+            <label for="alamat_ortu">Alamat Tempat Tinggal:</label>
+            <textarea id="alamat_ortu" name="alamat_ortu" rows="3" placeholder="Tulis alamat lengkap di sini yaa" required></textarea>
+
+            <label for="kontak_darurat">Kontak Darurat (selain orang tua):</label>
+            <input type="text" id="kontak_darurat" name="kontak_darurat" placeholder="Contoh: Tante Rina - 0821xxxxxxx" required>
+
+            <label for="makanan_favorit">Makanan favorit anak!~</label>
+            <input type="text" name="makanan_favorit" id="makanan_favorit" placeholder="Contoh: Bubur ayam, es krim" required>
+            
+            <div class="upload-area">
+  <label class="upload-btn" for="buktiPembayaran">💸 Upload Bukti Pembayaran Biaya Pendaftaran</label>
+  <input type="file" id="buktiPembayaran" name="bukti_pembayaran" accept="image/*,application/pdf" hidden required>
+  <p id="bukti-name">Belum ada file dipilih</p>
+</div>
+            
+            <button type="submit" name="submit">Kirim Form Pendaftaran!</button>
+        </form>
+
+        <footer class="footer" id="footer">
+            <p>🌸 Terima kasih sudah mempercayakan buah hati di <strong>Aerisha's Daycare</strong>! 💕<br>
+            📍 Lokasi: Jl. Rainbownies baby No.65, BabyTown | ☎️ 0812-3456-7890</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('tanggal_lahir').addEventListener('change', function () {
+            const tglLahir = new Date(this.value);
+            const today = new Date();
+
+            let umur = today.getFullYear() - tglLahir.getFullYear();
+            const bulan = today.getMonth() - tglLahir.getMonth();
+
+            if (bulan < 0 || (bulan === 0 && today.getDate() < tglLahir.getDate())) {
+                umur--;
+            }
+
+            document.getElementById('umur_anak').textContent = `Umur anak: ${umur} tahun`;
+          
+    const buktiInput = document.getElementById("buktiPembayaran");
+    const buktiName = document.getElementById("bukti-name");
+
+    buktiInput.addEventListener("change", function () {
+        buktiName.textContent = this.files.length > 0 ? this.files[0].name : "Belum ada file dipilih";
+    });
+
+    const gambarInput = document.getElementById("gambarInput");
+    const fileName = document.getElementById("file-name");
+
+    gambarInput.addEventListener("change", function () {
+        fileName.textContent = this.files.length > 0 ? this.files[0].name : "Belum ada file dipilih";
+    });
+</script>
+        });
+    </script>
+</body>
+</html>
