@@ -1,1 +1,24 @@
+<!-- Tombol Pintasan -->
+<div style="margin-top: 10px; display: flex; gap: 5px;">
+    <button type="button" onclick="setServer('INDO4')" style="padding: 5px 10px; cursor: pointer;">Set INDO4</button>
+    <button type="button" onclick="setServer('INDO7')" style="padding: 5px 10px; cursor: pointer;">Set INDO7</button>
+</div>
 
+<script>
+function setServer(serverName) {
+    // Cari elemen select dropdown (sesuaikan selector jika perlu, misal berdasarkan tag 'select' atau id/class)
+    const selectElement = document.querySelector('select'); // atau document.getElementById('id_dropdown_anda')
+    
+    if (selectElement) {
+        for (let option of selectElement.options) {
+            if (option.text.trim() === serverName || option.value.trim() === serverName) {
+                selectElement.value = option.value;
+                
+                // Memicu event 'change' agar sistem web mendeteksi perubahan pilihan
+                selectElement.dispatchEvent(new Event('change', { bubbles: true }));
+                break;
+            }
+        }
+    }
+}
+</script>
