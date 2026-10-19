@@ -1,24 +1,72 @@
-<!-- Tombol Pintasan -->
-<div style="margin-top: 10px; display: flex; gap: 5px;">
-    <button type="button" onclick="setServer('INDO4')" style="padding: 5px 10px; cursor: pointer;">Set INDO4</button>
-    <button type="button" onclick="setServer('INDO7')" style="padding: 5px 10px; cursor: pointer;">Set INDO7</button>
-</div>
-
-<script>
-function setServer(serverName) {
-    // Cari elemen select dropdown (sesuaikan selector jika perlu, misal berdasarkan tag 'select' atau id/class)
-    const selectElement = document.querySelector('select'); // atau document.getElementById('id_dropdown_anda')
-    
-    if (selectElement) {
-        for (let option of selectElement.options) {
-            if (option.text.trim() === serverName || option.value.trim() === serverName) {
-                selectElement.value = option.value;
-                
-                // Memicu event 'change' agar sistem web mendeteksi perubahan pilihan
-                selectElement.dispatchEvent(new Event('change', { bubbles: true }));
-                break;
-            }
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortcut TrackPro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b6b25;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
         }
-    }
-}
-</script>
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            color: #333;
+            width: 320px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: opacity 0.2s;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .btn-indo4 {
+            background-color: #2196F3; /* Warna Biru untuk Indo 4 */
+        }
+        .btn-indo7 {
+            background-color: #ff9800; /* Warna Oranye untuk Indo 7 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Pilih Server TrackPro</h2>
+        <!-- Tombol Menuju Indo 4 -->
+        <button class="btn btn-indo4" onclick="bukaTrackPro('INDO4')">Buka Indo 4</button>
+        <!-- Tombol Menuju Indo 7 -->
+        <button class="btn btn-indo7" onclick="bukaTrackPro('INDO7')">Buka Indo 7</button>
+    </div>
+
+    <script>
+        function bukaTrackPro(serverName) {
+            // Mengarahkan ke situs TrackPro dengan membawa parameter server di URL
+            const urlTujuan = `https://app1.muliatrack.com/trackpro/login.html?server=${serverName}`;
+            window.location.href = urlTujuan;
+        }
+    </script>
+</body>
+</html>
